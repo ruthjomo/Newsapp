@@ -20,9 +20,9 @@ def configure_request(app):
     search_url=app.config['SEARCH_SOURCES']
 
 def get_sources():
-    '''
-    Function that gets the json response from our url request
-    '''
+    
+    
+
     source_api_url=sources_url.format(api_key)
 
     with urllib.request.urlopen(source_api_url) as url:
@@ -38,9 +38,9 @@ def get_sources():
     return source_results
 
 def process_results(sources_list):
-    '''
-    Function  that processes the sources result and transforms them to a list of Objects
-    '''
+    
+    
+    
     source_results = []
     for sources in sources_list:
         id=sources.get('id')
@@ -70,9 +70,9 @@ def get_article(source_id):
     return articles_data
 
 def process_article(articles_list):
-    '''
-    Function  that processes the sources result and transform them to a list of Objects according to objects
-    '''
+    
+    
+    
     articles_data=[]
 
     for article in articles_list:
