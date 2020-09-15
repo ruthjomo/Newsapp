@@ -11,7 +11,7 @@ def index():
     business=search_for_article('business')
     sources=get_sources()
 
-    #Make request to get article from server
+    
     search=request.args.get('search_name')
 
     if search:
